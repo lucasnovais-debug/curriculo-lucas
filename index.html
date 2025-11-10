@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo de Lucas Novais dos Santos</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header id="header">
+        <h1>Lucas Novais</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#formacao">Formação</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <i id="toggle-theme" class="fas fa-moon"></i>
+    </header>
+    
+
+
+    <section id="home">
+        <img src="perfil.enc" alt="Avatar Lucas">
+        <h2>Lucas Novais dos Santos</h2>
+        <p>Sou estudante de informática com interesse em desenvolvimento web e programação. Busco uma oportunidade como Jovem Aprendiz para aplicar e expandir meus conhecimentos.”</p>
+        <button onclick="toggleInfo()">Mostrar mais</button>
+        <div id="extraInfo" style="display:none;">
+            <p>Sou estudante de informática e apaixonado por tecnologia e criatividade!</p>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Habilidades Técnicas</h2>
+        <div class="card">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript (básico)</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="formacao">
+        <h2>Formação Acadêmica</h2>
+        <div class="card">
+            <ul>
+                <li>Ensino Fundamental — Concluído</li>
+                <li>Ensino Médio — Cursando 2º ano</li>
+                <li>Curso Técnico em Informática — Conclusão prevista para Dezembro de 2025</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="projetos">
+        <h2>Experiências / Projetos</h2>
+        <div class="card">
+            <p>Em busca da primeira oportunidade profissional.</p>
+        </div>
+    </section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>E-mail: <a href="mailto:lucasnovais@eaportal.org">lucasnovais@eaportal.org</a></p>
+
+    <form
+  action="https://formspree.io/f/mqawkaeb"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+</section>
+
+<script>
+  const form = document.getElementById("form-contato");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      alert("✅ Mensagem enviada com sucesso!");
+      form.reset();
+    } else {
+      alert("❌ Ocorreu um erro. Tente novamente.");
+    }
+  });
+</script>
+
+</body>
+</html>
