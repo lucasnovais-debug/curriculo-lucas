@@ -5,7 +5,7 @@ Este é meu projeto de currículo digital, desenvolvido com **HTML**, **CSS** e 
 ---
 
 ## 🚀 Acesse o site
-🔗 [Clique aqui para ver o currículo online]
+🔗 [Clique aqui para ver o currículo online]https://lucasnovais-debug.github.io/curriculo-lucas/
 
 💡 Tecnologias utilizadas
 
